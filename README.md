@@ -6,9 +6,9 @@ This app features QR code-based attendance tracking combined with GPS location v
 
 ACES Application - Setup Guide
 ## Overview
-This repository contains the code for the ACES app with the package name com.mekongnet.aces
-The app is designed to use Firebase for push notifications. 
-This guide will help you configure Firebase with a new account and prepare the app for deployment on both Google Play Store and Apple App Store.
+- This repository contains the code for the ACES app with the package name com.mekongnet.aces
+- The app is designed to use Firebase for push notifications. 
+-  This guide will help you configure Firebase with a new account and prepare the app for deployment on both Google Play Store and Apple App Store.
 
 ## Prerequisites
 - Android Studio (latest version)
@@ -22,15 +22,15 @@ Dart 3.4.3 )
 ## API URL setup: Configuring .env for API URL
 This Flutter application uses a .env file to manage environment variables, including the API URL. To change the API_URL to your desired API endpoint, follow these steps:
 1. Create the .env file
-If it doesn’t already exist, create a .env file in the root directory of your Flutter project.
+- If it doesn’t already exist, create a .env file in the root directory of your Flutter project.
 2. .env file structure
-The .env file should look like this:
+- The .env file should look like this:
    ```env
    API_URL=https://example.com/api
    ```
    Replace https://example.com/api with your API URL.
 3. Install the dotenv package
-Make sure you’ve added the flutter_dotenv package to your pubspec.yaml file:
+- Make sure you’ve added the flutter_dotenv package to your pubspec.yaml file:
    ```yaml
    dependencies:
    flutter_dotenv: ^5.0.2
@@ -47,12 +47,12 @@ Install the package by running the following command:
       Note: Do not enable Google Analytics for this project since it won’t be used in this project.
 
 2. Project Settings:
-After the project is created, navigate to Project Settings by clicking the gear icon next to Project Overview.
-Note: Every Firebase project has a Project ID that uniquely identifies the project. This ID might be different from the Project Name and will be used later to set up FlutterFire.
+- After the project is created, navigate to Project Settings by clicking the gear icon next to Project Overview.
+- Note: Every Firebase project has a Project ID that uniquely identifies the project. This ID might be different from the Project Name and will be used later to set up FlutterFire.
  
 3. Set Up Firebase CLI
 Install Firebase CLI:
-If you already have Firebase CLI set up, you can skip this step.
+- If you already have Firebase CLI set up, you can skip this step.
    - Download and Install Firebase CLI:
    Visit the Firebase CLI Reference https://firebase.google.com/docs/cli to download and install the Firebase CLI.
 
@@ -88,7 +88,6 @@ If you already have Firebase CLI set up, you can skip this step.
        pod install
        ```
    - Integrating the Cloud Messaging plugin on iOS & macOS following the document: https://firebase.flutter.dev/docs/messaging/apple-integration/
-   - 
 ## Troubleshooting
 Ensure the google-services.json (Android) or GoogleService-Info.plist (iOS) file is correctly placed in the project directory.
 Verify that the Firebase SDK versions are correctly updated in the build.gradle or Podfile.
