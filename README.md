@@ -1,6 +1,6 @@
-# ems
+# ACES APP
 
-A new Flutter project.
+This app features QR code-based attendance tracking combined with GPS location verification. Users can conveniently check in and out by scanning a QR code and confirming their location. Additionally, the app allows users to submit requests for leave, overtime, and replacements, making workforce management easier and more efficient.
 
 ## Getting Started
 
