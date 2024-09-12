@@ -1,0 +1,730 @@
+{
+  "@@last_modified": "2024-09-11T13:23:54.657045",
+  "title": "Workplace",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendanceTitle": "Attendance",
+  "@attendanceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendanceSubtitle": "Checkin/Checkout",
+  "@attendanceSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "leaveTitle": "Leave",
+  "@leaveTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "leaveSubtitle": "History and request leave",
+  "@leaveSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "replaceTitle": "Replacement",
+  "@replaceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "replaceSubtitle": "History and request replace",
+  "@replaceSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "overtimeTitle": "Overtime",
+  "@overtimeTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "overtimeSubtitle": "History and request overtime",
+  "@overtimeSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "calendarTitle": "My Calendar",
+  "@calendarTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "calendarSubtitle": "Workday & Holiday",
+  "@calendarSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "membersTitle": "Members",
+  "@membersTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "membersSubtitle": "List all members",
+  "@membersSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendance": "Attendance",
+  "@attendance": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "morning": "Morning",
+  "@morning": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "afternoon": "Afternoon",
+  "@afternoon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "check_in": "Check-in",
+  "@check_in": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "check_out": "Check-out",
+  "@check_out": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cannot_check_in": "Cannot check in",
+  "@cannot_check_in": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "early": "Early",
+  "@early": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "late": "Late",
+  "@late": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "check": "Check",
+  "@check": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unchecked": "Unchecked",
+  "@unchecked": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendance_history": "Attendance History",
+  "@attendance_history": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "leave": "Leave",
+  "@leave": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "annual_leave": "Annual Leave",
+  "@annual_leave": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "replace_leave": "Replace Leave",
+  "@replace_leave": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unpaid": "Unpaid",
+  "@unpaid": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "no_data": "No data available",
+  "@no_data": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pending": "Pending",
+  "@pending": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "approved": "Approved",
+  "@approved": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rejected": "Rejected",
+  "@rejected": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "error": "Error: {error}",
+  "@error": {
+    "type": "text",
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "add_leave_request": "Add Leave Request",
+  "@add_leave_request": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "created_date": "Created Date",
+  "@created_date": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "status": "Status",
+  "@status": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "description": "Description",
+  "@description": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "duration": "Duration",
+  "@duration": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "all": "All",
+  "@all": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "date": "Date",
+  "@date": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reason": "Reason",
+  "@reason": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "leaveRequestDetail": "Leave Request Detail",
+  "@leaveRequestDetail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "from": "From",
+  "@from": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "to": "To",
+  "@to": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "Total",
+  "@total": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "days": "day(s)",
+  "@days": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "leaveType": "Type of Leave",
+  "@leaveType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phoneNumber": "Phone number",
+  "@phoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "approvedBy": "Approved by",
+  "@approvedBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "comment": "Comment",
+  "@comment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "CANCEL",
+  "@cancel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noDataAvailable": "No data available",
+  "@noDataAvailable": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestLeave": "Request Leave",
+  "@requestLeave": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "typeOfLeave": "Type of Leave",
+  "@typeOfLeave": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noFileSelected": "No file selected",
+  "@noFileSelected": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectStartBeforeEnd": "Please select the start date before the end date",
+  "@pleaseSelectStartBeforeEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "successLeaveRequest": "Leave request added successfully",
+  "@successLeaveRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "errorLeaveRequest": "Failed to add leave request",
+  "@errorLeaveRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "canceledSuccessfully": "Leave request canceled successfully",
+  "@canceledSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failedToCancel": "Failed to cancel leave request",
+  "@failedToCancel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterPhoneNumber": "Please enter your phone number",
+  "@pleaseEnterPhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterLeaveReason": "Please enter your reason",
+  "@pleaseEnterLeaveReason": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "submit": "Submit",
+  "@submit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "annualDayNotEnough": "You have {remainingDays} annual day(s). Not enough to leave",
+  "@annualDayNotEnough": {
+    "type": "text",
+    "placeholders": {
+      "remainingDays": {
+        "example": "3"
+      }
+    }
+  },
+  "replaceDayNotEnough": "You have {remainingDays} replace day(s). Not enough to leave",
+  "@replaceDayNotEnough": {
+    "type": "text",
+    "placeholders": {
+      "remainingDays": {
+        "example": "3"
+      }
+    }
+  },
+  "reasonPlaceholder": "Please write your reason here...",
+  "@reasonPlaceholder": {
+    "description": "Placeholder text for reason field",
+    "type": "text",
+    "placeholders": {}
+  },
+  "replaceRequestTitle": "Request Replace",
+  "@replaceRequestTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dateErrorStart": "Please select the start date after now",
+  "@dateErrorStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dateErrorEnd": "Please select the end date after now",
+  "@dateErrorEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dateErrorMonth": "Please select a date range within the same month.",
+  "@dateErrorMonth": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dateErrorBeforeEnd": "Please select the start date before the end date",
+  "@dateErrorBeforeEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dayOffErrorStart": "This start date is not a day off",
+  "@dayOffErrorStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dayOffErrorEnd": "This end date is not a day off",
+  "@dayOffErrorEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalDays": "Total: {totalDays} day(s)",
+  "@totalDays": {
+    "type": "text",
+    "placeholders": {
+      "totalDays": {}
+    }
+  },
+  "phoneNumberError": "Please enter your phone number",
+  "@phoneNumberError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitSuccess": "Submit successfully",
+  "@submitSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitFailure": "Submit failed",
+  "@submitFailure": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "overtimeExceed": "Overtime cannot exceed 12 hours",
+  "@overtimeExceed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestOvertime": "Request Overtime",
+  "@requestOvertime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "replace": "Replace",
+  "@replace": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "replaceRequestDetail": "Replace Request Detail",
+  "@replaceRequestDetail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "overtimeRequestDetail": "Overtime Request Detail",
+  "@overtimeRequestDetail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alreadyCheckedOut": "You have already checked out",
+  "@alreadyCheckedOut": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "checkinTimeOutsideOvertime": "Check-in time is outside the overtime",
+  "@checkinTimeOutsideOvertime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "workingTime": "Working Time",
+  "@workingTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "workdayTime": "Workday / Time",
+  "@workdayTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "holiday": "Holiday",
+  "@holiday": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dayOff": "Day off",
+  "@dayOff": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Profile",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "Logout",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings": "Settings",
+  "@settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "department": "Department",
+  "@department": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "position": "Position",
+  "@position": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "joinAt": "Join At",
+  "@joinAt": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "seniority": "Seniority",
+  "@seniority": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appVersion": "App Version",
+  "@appVersion": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "member": "Member",
+  "@member": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "year": "year",
+  "@year": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "years": "years",
+  "@years": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "month": "month",
+  "@month": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "months": "months",
+  "@months": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "day": "day",
+  "@day": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "qrCodeScanner": "QR Code Scanner",
+  "@qrCodeScanner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "code": "Code",
+  "@code": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanACode": "Scan a code",
+  "@scanACode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendanceSuccessful": "Attendance successful!",
+  "@attendanceSuccessful": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseTryAgainOrContactYourManager": "Please try again or contact your manager.",
+  "@pleaseTryAgainOrContactYourManager": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failedToLogIn": "Failed to log in",
+  "@failedToLogIn": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanQRCodeToLogin": "Scan QR code to login",
+  "@scanQRCodeToLogin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "HOME",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "me": "ME",
+  "@me": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failedToAddLeaveRequest": "Failed to add leave request:",
+  "@failedToAddLeaveRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logInSuccessfully": "Log in successfully",
+  "@logInSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notification": "Notification",
+  "@notification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "markAllAsRead": "Mark all as read",
+  "@markAllAsRead": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noteTitle": "Note",
+  "@noteTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "submitNotePrompt": "Please submit your note before you scan",
+  "@submitNotePrompt": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noteHint": "Please write your note here...",
+  "@noteHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sorryLate": "Sorry I am late",
+  "@sorryLate": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "iAmSick": "I am sick",
+  "@iAmSick": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "doneButton": "DONE",
+  "@doneButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "skipButton": "SKIP",
+  "@skipButton": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "errorTitle": "Error",
+  "@errorTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locationError": "You are not in the correct location to check-in.",
+  "@locationError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ot_checkin_note": "Please check in no later than 30 minutes before and no later than 1 hour after the registration time!",
+  "@ot_checkin_note": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hours": "hour(s)",
+  "@hours": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "upload_success": "Upload successfully",
+  "@upload_success": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "upload_failed": "Upload failed",
+  "@upload_failed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "haveRegisterRequest": "You have registered a request at this time, please check again.",
+  "@haveRegisterRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dayOffError": "The day {date} is a day off",
+  "@dayOffError": {
+    "type": "text",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "notDayOffError": "The day {date} is not a day off",
+  "@notDayOffError": {
+    "type": "text",
+    "placeholders": {
+      "date": {}
+    }
+  },
+  "feedback": "Feedback",
+  "@feedback": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "recommendation": "Recommendation",
+  "@recommendation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "give_feedback": "Give Feedback",
+  "@give_feedback": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "write_feedback": "Please write your feedback here...",
+  "@write_feedback": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "write_recommendation": "Please write your recommendation here...",
+  "@write_recommendation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rate_experience": "How would you rate your experience?",
+  "@rate_experience": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirm_logout": "Confirm Logout",
+  "@confirm_logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout_confirmation": "Are you sure you want to logout?\nIf you log out, you will need a QR code provided by your manager to log in again.",
+  "@logout_confirmation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "yes": "Yes",
+  "@yes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "no": "No",
+  "@no": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

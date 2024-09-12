@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1037571020825",
+    "project_id": "aces-a0702",
+    "storage_bucket": "aces-a0702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037571020825:android:4e6eeb9ad16a82687ff288",
+        "android_client_info": {
+          "package_name": "com.mekongnet.aces"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuNmXJjrSvZTJKYQS4YGU5rUEx0Xd_Gdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
