@@ -11,15 +11,14 @@ The app is designed to use Firebase for push notifications.
 This guide will help you configure Firebase with a new account and prepare the app for deployment on both Google Play Store and Apple App Store.
 
 ## Prerequisites
-Android Studio (latest version)
-Xcode (latest version for iOS)
-Firebase account
-Java Development Kit (JDK) 8+
-Flutter SDK 
-Google Play Console and Apple App Store credentials for app submission
+- Android Studio (latest version)
+- Xcode (latest version for iOS)
+- Firebase account
+- Java Development Kit (JDK) 8+
+- Flutter SDK 
+- Google Play Console and Apple App Store credentials for app submission
 (Flutter 3.22.2 • https://github.com/flutter/flutter.git
-Dart 3.4.3 
-)
+Dart 3.4.3 )
 ## API URL setup: Configuring .env for API URL
 This Flutter application uses a .env file to manage environment variables, including the API URL. To change the API_URL to your desired API endpoint, follow these steps:
 1. Create the .env file
