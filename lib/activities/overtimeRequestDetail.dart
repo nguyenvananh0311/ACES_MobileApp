@@ -194,8 +194,8 @@ class _GetOvertimeRequestState extends State<GetOvertimeRequestScreen> {
                               LeaveDetailItem(label: localization.approvedBy,description:  otRequest.updateByName.toString()),
                             LeaveDetailItem(label: localization.comment,description:  otRequest.comment != null ? otRequest.comment.toString() : ''),
                             LeaveDetailItem(label: localization.reason,description:  otRequest.reason.toString() ),
-                            LeaveDetailItem(label: localization.check_in,description: otRequest.checkInTime == null ? '' : DateFormat('dd MMMM y hh:ss').format(otRequest.checkInTime) ),
-                            LeaveDetailItem(label: localization.check_out,description: otRequest.checkOutTime == null ? '' : DateFormat('dd MMMM y hh:ss').format(otRequest.checkOutTime) ),
+                            LeaveDetailItem(label: localization.check_in,description: otRequest.checkInTime == null ? '' : DateFormat('dd MMMM y hh:mm').format(otRequest.checkInTime) ),
+                            LeaveDetailItem(label: localization.check_out,description: otRequest.checkOutTime == null ? '' : DateFormat('dd MMMM y hh:mm').format(otRequest.checkOutTime) ),
                             if(otRequest.fileName != null && otRequest.fileName != '')
                               Center(
                                 child: CachedNetworkImage(
