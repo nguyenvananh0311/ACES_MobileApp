@@ -1,10 +1,10 @@
-# ems
+# EMS
 
 A new Flutter project.
 
 ## Getting Started
 
-ems Application - Setup Guide
+EMS Application - Setup Guide
 ## Overview
 This repository contains the code for the ems app with the package name com.mekongnet.ems
 The app is designed to use Firebase for push notifications. 
