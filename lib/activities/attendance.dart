@@ -63,21 +63,28 @@ class _AttendanceState extends State<AttendanceScreen> {
     });
 
     if (isCorrectLocation) {
-      if((compareTimes(attendance.morCheckInStandard!, timeNow) && compareTimes(timeNow, attendance.morCheckOutStandard!) && attendance.morCheckIn == null)
-      || (compareTimes(timeNow, attendance.morCheckOutStandard!) && attendance.morCheckIn != null)
-      || (compareTimes(attendance.aftCheckInStandard!, timeNow) && attendance.aftCheckIn == null)
-      || (compareTimes(timeNow, attendance.aftCheckOutStandard!) && attendance.aftCheckIn != null)) {
-        showReasonDialog(context, _reasonController, _reloadData, widget.employeeId, widget.companyId, true,branch.name );
-      }
-      else{
-        await Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ScanQRScreen(employeeId: widget.employeeId, companyId: widget.companyId,branch: branch.name,)),
-        );
-        setState(() {
-          futureData = fetchData();
-        });
-      }
+      await Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ScanQRScreen(employeeId: widget.employeeId, companyId: widget.companyId,branch: branch.name,)),
+      );
+      setState(() {
+        futureData = fetchData();
+      });
+      // if((compareTimes(attendance.morCheckInStandard!, timeNow) && compareTimes(timeNow, attendance.morCheckOutStandard!) && attendance.morCheckIn == null)
+      // || (compareTimes(timeNow, attendance.morCheckOutStandard!) && attendance.morCheckIn != null)
+      // || (compareTimes(attendance.aftCheckInStandard!, timeNow) && attendance.aftCheckIn == null)
+      // || (compareTimes(timeNow, attendance.aftCheckOutStandard!) && attendance.aftCheckIn != null)) {
+      //   showReasonDialog(context, _reasonController, _reloadData, widget.employeeId, widget.companyId, true,branch.name );
+      // }
+      // else{
+      //   await Navigator.push(
+      //     context,
+      //     MaterialPageRoute(builder: (context) => ScanQRScreen(employeeId: widget.employeeId, companyId: widget.companyId,branch: branch.name,)),
+      //   );
+      //   setState(() {
+      //     futureData = fetchData();
+      //   });
+      // }
     }
     return isCorrectLocation;
   }

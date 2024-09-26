@@ -261,10 +261,10 @@ class _ProfileState extends State<ProfileScreen> {
                   ),
 
                   const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('${localization.appVersion}: 1.0.0'),
-                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: Text('${localization.appVersion}: 1.0.0'),
+                  // ),
                 ],
               );
             }

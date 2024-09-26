@@ -107,7 +107,7 @@ class _MemberState extends State<MemberScreen> {
                                   child: const Icon(Icons.phone, size: 25, color: Colors.white),)
                                     : const SizedBox(width: 0,),
                                 onTap: (){
-                                    if(members![index].phoneNumber != null) {
+                                    if(members![index].phoneNumber != null && members![index].phoneNumber != "") {
                                       _makePhoneCall(members![index].phoneNumber);
                                     }
                                 },

@@ -98,51 +98,51 @@ class _GetOvertimeRequestState extends State<GetOvertimeRequestScreen> {
                   children: [
                     if(isLoading)
                         const Center(child: CircularProgressIndicator()),
-                    if(otRequest.status == "Approved")
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20,5,20,5),
-                        child: Text("Note: ${localization.ot_checkin_note}", style: TextStyle(color: Colors.red),),
-                      ),
-                    if(otRequest.status == "Approved")
-                      ElevatedButton(
-                        onPressed: () async {
-                          if(checkTime(now, otRequest)){ //&& (otRequest.checkInTime == null || otRequest.checkOutTime == null) ){
-                            var response = await ApiService().fetchBranch(widget.employeeId, widget.companyId);
-                            if (response.isSuccess) {
-                              List<Branch>? branches = response.response;
-                              bool isCorrectBranch = false;
-                              for(int i =0; i< branches!.length; i++){
-                                bool result = await _checkLocationAndShowDialog(branches[i]);
-                                if(result){
-                                  isCorrectBranch = true;
-                                  break;
-                                }
-                              }
-                              if(!isCorrectBranch){
-                                showErrorDialog(context);
-                              }
-                            }
-                            else {
-                              errorToast(localization.cannot_check_in);
-                            }
-                          }
-                          // else if(otRequest.checkInTime != null && otRequest.checkOutTime != null){
-                          //   errorToast(localization.alreadyCheckedOut);
-                          // }
-                          else{
-                            errorToast(localization.checkinTimeOutsideOvertime);
-                          }
-                        },
-                        style: checkTime(now, otRequest) && (otRequest.checkInTime == null || otRequest.checkOutTime == null) ? ElevatedButton.styleFrom(
-                          foregroundColor: Colors.white, backgroundColor: Colors.blue, shape: const CircleBorder(),
-                          padding: const EdgeInsets.all(40), // <-- Splash color
-                        ) : ElevatedButton.styleFrom(
-                          foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: const CircleBorder(),
-                          padding: const EdgeInsets.all(40), // <-- Splash color
-                        ),
-                        child: Text("${otRequest.checkInTime == null ? localization.check_in : localization.check_out} \n$formattedTime",
-                          style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,)
-                    ),
+                    // if(otRequest.status == "Approved")
+                    //   Padding(
+                    //     padding: const EdgeInsets.fromLTRB(20,5,20,5),
+                    //     child: Text("Note: ${localization.ot_checkin_note}", style: TextStyle(color: Colors.red),),
+                    //   ),
+                    // if(otRequest.status == "Approved")
+                    //   ElevatedButton(
+                    //     onPressed: () async {
+                    //       if(checkTime(now, otRequest)){ //&& (otRequest.checkInTime == null || otRequest.checkOutTime == null) ){
+                    //         var response = await ApiService().fetchBranch(widget.employeeId, widget.companyId);
+                    //         if (response.isSuccess) {
+                    //           List<Branch>? branches = response.response;
+                    //           bool isCorrectBranch = false;
+                    //           for(int i =0; i< branches!.length; i++){
+                    //             bool result = await _checkLocationAndShowDialog(branches[i]);
+                    //             if(result){
+                    //               isCorrectBranch = true;
+                    //               break;
+                    //             }
+                    //           }
+                    //           if(!isCorrectBranch){
+                    //             showErrorDialog(context);
+                    //           }
+                    //         }
+                    //         else {
+                    //           errorToast(localization.cannot_check_in);
+                    //         }
+                    //       }
+                    //       // else if(otRequest.checkInTime != null && otRequest.checkOutTime != null){
+                    //       //   errorToast(localization.alreadyCheckedOut);
+                    //       // }
+                    //       else{
+                    //         errorToast(localization.checkinTimeOutsideOvertime);
+                    //       }
+                    //     },
+                    //     style: checkTime(now, otRequest) && (otRequest.checkInTime == null || otRequest.checkOutTime == null) ? ElevatedButton.styleFrom(
+                    //       foregroundColor: Colors.white, backgroundColor: Colors.blue, shape: const CircleBorder(),
+                    //       padding: const EdgeInsets.all(40), // <-- Splash color
+                    //     ) : ElevatedButton.styleFrom(
+                    //       foregroundColor: Colors.white, backgroundColor: Colors.grey, shape: const CircleBorder(),
+                    //       padding: const EdgeInsets.all(40), // <-- Splash color
+                    //     ),
+                    //     child: Text("${otRequest.checkInTime == null ? localization.check_in : localization.check_out} \n$formattedTime",
+                    //       style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,)
+                    // ),
                     Card(
                       margin: const EdgeInsets.fromLTRB(20,10,20,20),
                       elevation: 5.0,

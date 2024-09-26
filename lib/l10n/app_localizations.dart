@@ -17,11 +17,11 @@ class AppLocalizations {
   static AppLocalizations? of(BuildContext context) {return Localizations.of<AppLocalizations>(context, AppLocalizations);}
   String get title {return Intl.message('Workplace', name: 'title');}
   String get attendanceTitle {return Intl.message('Attendance', name: 'attendanceTitle');}
-  String get attendanceSubtitle {return Intl.message('Checkin/Checkout', name: 'attendanceSubtitle');}
+  String get attendanceSubtitle {return Intl.message('Check in/Check out', name: 'attendanceSubtitle');}
   String get leaveTitle {return Intl.message('Leave', name: 'leaveTitle');}
   String get leaveSubtitle {return Intl.message('History and request leave', name: 'leaveSubtitle');}
   String get replaceTitle {return Intl.message('Replacement', name: 'replaceTitle');}
-  String get replaceSubtitle {return Intl.message('History and request replace', name: 'replaceSubtitle');}
+  String get replaceSubtitle {return Intl.message('History and request replacement', name: 'replaceSubtitle');}
   String get overtimeTitle {return Intl.message('Overtime', name: 'overtimeTitle');}
   String get overtimeSubtitle {return Intl.message('History and request overtime', name: 'overtimeSubtitle');}
   String get calendarTitle {return Intl.message('My Calendar', name: 'calendarTitle');}
@@ -114,7 +114,7 @@ class AppLocalizations {
   // String get pleaseEnterYourReason => Intl.message('Please enter your reason', name: 'pleaseEnterYourReason',);
   // String get addedSuccessfully => Intl.message('Added successfully', name: 'addedSuccessfully',);
   // String get failedToAddRequest => Intl.message('Failed to add request', name: 'failedToAddRequest',);
-  String get replace => Intl.message('Replace', name: 'replace',);
+  String get replace => Intl.message('Replacement', name: 'replace',);
   String get replaceRequestDetail => Intl.message('Replace Request Detail', name: 'replaceRequestDetail',);
   String get overtimeRequestDetail => Intl.message('Overtime Request Detail', name: 'overtimeRequestDetail',);
   String get alreadyCheckedOut => Intl.message('You have already checked out', name: 'alreadyCheckedOut',);

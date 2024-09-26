@@ -241,6 +241,7 @@ class _AddOvertimeRequestState extends State<AddOvertimeRequestScreen> {
                                   _fileName = file.name.length > 15? "${file.name.substring(0, 10)}...$fileExtension" : file.name;
                                   _fileBase64 =  _convertToBase64(file);
                                 });
+                                
                               }
                           ),
 

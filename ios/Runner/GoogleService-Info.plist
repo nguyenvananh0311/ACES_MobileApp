@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyALlbY9FrqJVCuL2eP8qG6nMHFnNnUxbgY</string>
+	<string>AIzaSyCdyd9rTTRjvxXfwhOCkVKPK2gkvbsCmCg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1037571020825</string>
+	<string>625334484144</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mekongnet.aces</string>
+	<string>com.mekongnet.ems</string>
 	<key>PROJECT_ID</key>
-	<string>aces-a0702</string>
+	<string>mekongnetems-63ac1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>aces-a0702.appspot.com</string>
+	<string>mekongnetems-63ac1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1037571020825:ios:1ab49a6f8a93195d7ff288</string>
+	<string>1:625334484144:ios:1c9e7ccf478fb3a0e6cf75</string>
 </dict>
 </plist>

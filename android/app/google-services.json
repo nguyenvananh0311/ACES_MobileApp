@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "1037571020825",
-    "project_id": "aces-a0702",
-    "storage_bucket": "aces-a0702.appspot.com"
+    "project_number": "625334484144",
+    "project_id": "mekongnetems-63ac1",
+    "storage_bucket": "mekongnetems-63ac1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1037571020825:android:4e6eeb9ad16a82687ff288",
+        "mobilesdk_app_id": "1:625334484144:android:9eb109aa0bb6b33ae6cf75",
         "android_client_info": {
-          "package_name": "com.mekongnet.aces"
+          "package_name": "com.mekongnet.ems"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDuNmXJjrSvZTJKYQS4YGU5rUEx0Xd_Gdo"
+          "current_key": "AIzaSyBiKxNIikzJZderUnKbtaQSR11UOL08Q7c"
         }
       ],
       "services": {

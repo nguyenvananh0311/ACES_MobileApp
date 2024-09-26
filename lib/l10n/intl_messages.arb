@@ -10,7 +10,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "attendanceSubtitle": "Checkin/Checkout",
+  "attendanceSubtitle": "Check in/Check out",
   "@attendanceSubtitle": {
     "type": "text",
     "placeholders": {}
@@ -30,7 +30,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "replaceSubtitle": "History and request replace",
+  "replaceSubtitle": "History and request replacement",
   "@replaceSubtitle": {
     "type": "text",
     "placeholders": {}
@@ -413,7 +413,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "replace": "Replace",
+  "replace": "Replacement",
   "@replace": {
     "type": "text",
     "placeholders": {}

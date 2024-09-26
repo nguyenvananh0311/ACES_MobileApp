@@ -35,6 +35,7 @@ class WorkdayWidget extends StatelessWidget {
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    if(workday.morCheckInTime != null)
                     Row(
                       children: [
                         const Icon(Icons.circle_rounded, size: 10,color: Colors.blue,),
@@ -42,6 +43,7 @@ class WorkdayWidget extends StatelessWidget {
                         Text('${workday.morCheckInTime} - ${workday.morCheckOutTime}'),
                       ],
                     ),
+                    if(workday.aftCheckInTime != null)
                     Row(
                       children: [
                         const Icon(Icons.circle_rounded, size: 10,color: Colors.blue,),

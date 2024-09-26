@@ -26,7 +26,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.mekongnet.aces"
+    namespace "com.mekongnet.ems"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -44,7 +44,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mekongnet.aces"
+        applicationId "com.mekongnet.ems"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
