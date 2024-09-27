@@ -96,5 +96,6 @@ Verify that the Firebase SDK versions are correctly updated in the build.gradle 
 For Android, ensure that the app has internet permissions in the AndroidManifest.xml.
 
 ##Tesing
-Scan QR code to login
+- Scan QR code to login:
+
 ![Alt text](https://github.com/nguyenvananh0311/ACES_MobileApp/blob/main/LoginQRCode.jpg)
