@@ -53,7 +53,7 @@ class _AddLeaveRequestState extends State<AddLeaveRequestScreen> {
   bool _dateError = false, _reasonError = false, _phoneError = false, _typeError = false;
   String typeErrorLog = "";
   String dateErrorLog = "";
-  final List<String> _leaveTypes = ['Annual', 'Unpaid','Replace'];
+  final List<String> _leaveTypes = ['Annual', 'Unpaid','Replace','Sick','Married','Maternity','Paternity','Bereavement'];
   DateTime now = DateTime.now();
   @override
   void initState() {

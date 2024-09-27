@@ -41,47 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC4bGV4Y71UAupstIfU385L6wpIAstUpkU',
-    appId: '1:625334484144:web:91512ef5366dc32ae6cf75',
-    messagingSenderId: '625334484144',
-    projectId: 'mekongnetems-63ac1',
-    authDomain: 'mekongnetems-63ac1.firebaseapp.com',
-    storageBucket: 'mekongnetems-63ac1.appspot.com',
+    apiKey: 'AIzaSyB6fczswgAHD5kTHs6KeolSUbNRIUXPBiw',
+    appId: '1:70998029741:web:5300c0127e297bc0821d24',
+    messagingSenderId: '70998029741',
+    projectId: 'aies-b9266',
+    authDomain: 'aies-b9266.firebaseapp.com',
+    storageBucket: 'aies-b9266.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBiKxNIikzJZderUnKbtaQSR11UOL08Q7c',
-    appId: '1:625334484144:android:9eb109aa0bb6b33ae6cf75',
-    messagingSenderId: '625334484144',
-    projectId: 'mekongnetems-63ac1',
-    storageBucket: 'mekongnetems-63ac1.appspot.com',
+    apiKey: 'AIzaSyALjxwhLYz05zOEm_9qbu5_LdbNbdxmyU8',
+    appId: '1:70998029741:android:f31f4d91d59ace85821d24',
+    messagingSenderId: '70998029741',
+    projectId: 'aies-b9266',
+    storageBucket: 'aies-b9266.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCdyd9rTTRjvxXfwhOCkVKPK2gkvbsCmCg',
-    appId: '1:625334484144:ios:1c9e7ccf478fb3a0e6cf75',
-    messagingSenderId: '625334484144',
-    projectId: 'mekongnetems-63ac1',
-    storageBucket: 'mekongnetems-63ac1.appspot.com',
-    iosBundleId: 'com.mekongnet.ems',
+    apiKey: 'AIzaSyAoKLWXnsAjlgl3SljrDWudn8i1bTQ13ws',
+    appId: '1:70998029741:ios:9b7f1a67a18054e9821d24',
+    messagingSenderId: '70998029741',
+    projectId: 'aies-b9266',
+    storageBucket: 'aies-b9266.appspot.com',
+    iosBundleId: 'com.mekongnet.aies',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCdyd9rTTRjvxXfwhOCkVKPK2gkvbsCmCg',
-    appId: '1:625334484144:ios:1c9e7ccf478fb3a0e6cf75',
-    messagingSenderId: '625334484144',
-    projectId: 'mekongnetems-63ac1',
-    storageBucket: 'mekongnetems-63ac1.appspot.com',
+    apiKey: 'AIzaSyAoKLWXnsAjlgl3SljrDWudn8i1bTQ13ws',
+    appId: '1:70998029741:ios:dba7354f5645043d821d24',
+    messagingSenderId: '70998029741',
+    projectId: 'aies-b9266',
+    storageBucket: 'aies-b9266.appspot.com',
     iosBundleId: 'com.mekongnet.ems',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC4bGV4Y71UAupstIfU385L6wpIAstUpkU',
-    appId: '1:625334484144:web:4de10b4a256cfdcce6cf75',
-    messagingSenderId: '625334484144',
-    projectId: 'mekongnetems-63ac1',
-    authDomain: 'mekongnetems-63ac1.firebaseapp.com',
-    storageBucket: 'mekongnetems-63ac1.appspot.com',
+    apiKey: 'AIzaSyB6fczswgAHD5kTHs6KeolSUbNRIUXPBiw',
+    appId: '1:70998029741:web:2b71d4518c01df01821d24',
+    messagingSenderId: '70998029741',
+    projectId: 'aies-b9266',
+    authDomain: 'aies-b9266.firebaseapp.com',
+    storageBucket: 'aies-b9266.appspot.com',
   );
 
 }

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "625334484144",
-    "project_id": "mekongnetems-63ac1",
-    "storage_bucket": "mekongnetems-63ac1.appspot.com"
+    "project_number": "70998029741",
+    "project_id": "aies-b9266",
+    "storage_bucket": "aies-b9266.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:625334484144:android:9eb109aa0bb6b33ae6cf75",
+        "mobilesdk_app_id": "1:70998029741:android:f31f4d91d59ace85821d24",
         "android_client_info": {
-          "package_name": "com.mekongnet.ems"
+          "package_name": "com.mekongnet.aies"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBiKxNIikzJZderUnKbtaQSR11UOL08Q7c"
+          "current_key": "AIzaSyALjxwhLYz05zOEm_9qbu5_LdbNbdxmyU8"
         }
       ],
       "services": {

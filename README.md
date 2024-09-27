@@ -1,12 +1,12 @@
-# ems
+# AIES
 
 A new Flutter project.
 
 ## Getting Started
 
-ems Application - Setup Guide
+AIES Application - Setup Guide
 ## Overview
-This repository contains the code for the ems app with the package name com.mekongnet.ems
+This repository contains the code for the AIES app with the package name com.mekongnet.aies
 The app is designed to use Firebase for push notifications. 
 This guide will help you configure Firebase with a new account and prepare the app for deployment on both Google Play Store and Apple App Store.
 
@@ -44,7 +44,7 @@ Install the package by running the following command:
 
 1. Create a Project with Firebase Console 
     - Log in to Firebase: If you have a Google account, visit the Firebase Console https://firebase.google.com/, log in with your Google account, and then click Go to Console.
-    - Create a Project: In the Firebase Console, click Add Project. Follow the instructions to create a project (example: ems). 
+    - Create a Project: In the Firebase Console, click Add Project. Follow the instructions to create a project (example: aies). 
       Note: Do not enable Google Analytics for this project since it won’t be used in this project.
 
 2. Project Settings:

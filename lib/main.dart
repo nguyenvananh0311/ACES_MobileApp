@@ -86,20 +86,24 @@ class _MyAppState extends State<MyApp> {
       final signalRServiceProvider = Provider.of<SignalRServiceProvider>(context, listen: false);
       signalRServiceProvider.initialize(widget.employeeId!, widget.companyId!);
     }
-    _firebaseMessaging.requestPermission();
-
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      // print('Nhận được thông báo: ${message.notification?.title}');
-      LocalNotificationService().showNotificationAndroid('${message.notification?.title}', '${message.notification?.body}');
-      // LocalNotificationService().showNotificationIos('${message.notification?.title}', '${message.notification?.body}');
-
-    });
-
-    _firebaseMessaging.getToken().then((token) {
-      print('FCM Token: $token');
-      Subscription subscription = Subscription(id: widget.employeeId!, token: token!);
-      ApiService().subscribe(subscription, widget.companyId!);
-    });
+    // if (widget.employeeId != null && widget.companyId != null) {
+    //   final signalRServiceProvider = Provider.of<SignalRServiceProvider>(context, listen: false);
+    //   signalRServiceProvider.initialize(widget.employeeId!, widget.companyId!);
+    // }
+    // _firebaseMessaging.requestPermission();
+    //
+    // FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    //   // print('Nhận được thông báo: ${message.notification?.title}');
+    //   LocalNotificationService().showNotificationAndroid('${message.notification?.title}', '${message.notification?.body}');
+    //   // LocalNotificationService().showNotificationIos('${message.notification?.title}', '${message.notification?.body}');
+    //
+    // });
+    //
+    // _firebaseMessaging.getToken().then((token) {
+    //   print('FCM Token: $token');
+    //   Subscription subscription = Subscription(id: widget.employeeId!, token: token!);
+    //   ApiService().subscribe(subscription, widget.companyId!);
+    // });
   }
 
   void _setLocale(Locale locale) {

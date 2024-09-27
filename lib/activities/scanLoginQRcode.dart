@@ -7,6 +7,7 @@ import '../l10n/app_localizations.dart';
 import '../mainscreen.dart';
 import '../models/login/login.dart';
 import '../services/apiService.dart';
+import '../services/firebaseService.dart';
 
 class ScanLoginQRScreen extends StatefulWidget {
   final Function(Locale) onLocaleChange;
@@ -58,7 +59,7 @@ class _ScanLoginQRState extends State<ScanLoginQRScreen> {
       await prefs.setString('companyId', mobileLogin!.companyId);
       await prefs.setString('name', mobileLogin.name == null ? "": mobileLogin.name.toString());
       await prefs.setInt('employeeId', mobileLogin.id);
-
+      FirebaseService().initializeFirebaseMessaging(mobileLogin.id, mobileLogin.companyId);
       controller?.pauseCamera();
       controller?.dispose();
       Navigator.of(context).pop();

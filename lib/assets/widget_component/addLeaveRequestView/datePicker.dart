@@ -13,7 +13,7 @@ class DatePicker extends StatelessWidget {
     DateTime? selectedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
+      firstDate: DateTime.now().add(const Duration(days: -1)),
       lastDate: DateTime(2101),
     );
     if (selectedDate != null) {
