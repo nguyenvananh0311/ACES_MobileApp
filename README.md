@@ -95,7 +95,7 @@ Ensure the google-services.json (Android) or GoogleService-Info.plist (iOS) file
 Verify that the Firebase SDK versions are correctly updated in the build.gradle or Podfile.
 For Android, ensure that the app has internet permissions in the AndroidManifest.xml.
 
-##Tesing
+## Tesing
 - Scan QR code to login:
 
 ![Alt text](https://github.com/nguyenvananh0311/ACES_MobileApp/blob/main/LoginQRCode.jpg)
