@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
     'calendarSubtitle': MessageLookupByLibrary.simpleMessage('Workday & Holiday'),
     'calendarTitle': MessageLookupByLibrary.simpleMessage('My Calendar'),
     'cancel': MessageLookupByLibrary.simpleMessage('CANCEL'),
+    'cancel_lowercase': MessageLookupByLibrary.simpleMessage('Cancel'),
     'canceledSuccessfully': MessageLookupByLibrary.simpleMessage('Canceled successfully'),
     'cannot_check_in': MessageLookupByLibrary.simpleMessage('Cannot check in'),
     'check': MessageLookupByLibrary.simpleMessage('Check'),
