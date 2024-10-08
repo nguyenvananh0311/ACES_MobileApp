@@ -192,6 +192,11 @@ class AppLocalizations {
   String get logout_confirmation => Intl.message("Are you sure you want to logout?\nIf you log out, you will need a QR code provided by your manager to log in again.", name: 'logout_confirmation');
   String get yes => Intl.message("Yes", name: 'yes');
   String get no => Intl.message("No", name: 'no');
+
+  String get location_dialog_title => Intl.message("Location Permission Denied", name: 'location_dialog_title');
+  String get location_dialog_content => Intl.message("You have permanently denied location access. Please enable the permission in system settings.", name: 'location_dialog_content');
+  String get go_to_settings => Intl.message("Go to Settings", name: 'go_to_settings');
+  String get cancel_lowercase => Intl.message("Cancel", name: 'cancel_lowercase');
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

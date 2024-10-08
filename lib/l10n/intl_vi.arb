@@ -160,5 +160,10 @@
   "confirm_logout": "Xác nhận đăng xuất",
   "logout_confirmation": "Bạn có chắc chắn muốn đăng xuất không?\nNếu bạn đăng xuất, bạn sẽ cần mã QR được cung cấp bởi quản lý của bạn để đăng nhập lại.",
   "yes": "Có",
-  "no": "Không"
+  "no": "Không",
+
+  "location_dialog_title": "Quyền vị trí bị từ chối",
+      "location_dialog_content": "Bạn đã từ chối quyền truy cập vị trí vĩnh viễn. Hãy bật lại quyền trong cài đặt hệ thống.",
+      "go_to_settings": "Đi đến cài đặt",
+      "cancel_lowercase": "Hủy"
 }

@@ -162,5 +162,11 @@
   "confirm_logout": "Confirm Logout",
   "logout_confirmation": "Are you sure you want to logout?\nIf you log out, you will need a QR code provided by your manager to log in again.",
   "yes": "Yes",
-  "no": "No"
+  "no": "No",
+
+  "location_dialog_title": "Location Permission Denied",
+    "location_dialog_content": "You have permanently denied location access. Please enable the permission in system settings.",
+    "go_to_settings": "Go to Settings",
+    "cancel_lowercase": "Cancel"
+
 }

@@ -1,4 +1,5 @@
 import 'package:ems/activities/scanQRcode.dart';
+import 'package:ems/assets/widget_component/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
@@ -98,10 +99,37 @@ class _AttendanceState extends State<AttendanceScreen> {
     }
     if (permission == LocationPermission.deniedForever) {
       // Permissions are denied forever
-      // Handle appropriately, maybe show a dialog
+      _showPermissionDialog(context);
     }
   }
-
+  void _showPermissionDialog(BuildContext context) {
+    var localization = AppLocalizations.of(context);
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(localization!.location_dialog_title),
+          content: Text(
+              localization.location_dialog_content),
+          actions: <Widget>[
+            TextButton(
+              child: Text(localization.go_to_settings),
+              onPressed: () {
+                Geolocator.openAppSettings();
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text(localization.cancel_lowercase),
+              onPressed: () {
+                Navigator.of(context).pop(); // Đóng dialog
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
   void _reloadData() {
     setState(() {
       futureData = fetchData();
@@ -220,31 +248,35 @@ class _AttendanceState extends State<AttendanceScreen> {
                     ? const Center(child: CircularProgressIndicator())
                     : TextButton(
                   onPressed: () async {
-                    var response = await ApiService().fetchBranch(widget.employeeId, widget.companyId);
-                    if (response.isSuccess) {
-                      List<Branch>? branches = response.response;
-                      bool isCorrectBranch = false;
-                      for(int i =0; i< branches!.length; i++){
-                         bool result = await _checkLocationAndShowDialog(attendance!, branches[i]);
-                         if(result){
-                           isCorrectBranch = true;
-                           break;
-                         }
-                      }
-                      if(!isCorrectBranch){
-                        showErrorDialog(context);
-                      }
-                    } else {
-                      Fluttertoast.showToast(
-                        msg: localization.cannot_check_in,
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.red,
-                        textColor: Colors.white,
-                        fontSize: 16.0,
-                      );
+                    LocationPermission permission = await Geolocator.requestPermission();
+                    if (permission == LocationPermission.denied) {
+                      // Permissions are denied, request again
+                      permission = await Geolocator.requestPermission();
                     }
+                    if (permission == LocationPermission.deniedForever) {
+                      // Permissions are denied forever
+                      _showPermissionDialog(context);
+                    }
+                    else{
+                      var response = await ApiService().fetchBranch(widget.employeeId, widget.companyId);
+                      if (response.isSuccess) {
+                        List<Branch>? branches = response.response;
+                        bool isCorrectBranch = false;
+                        for(int i =0; i< branches!.length; i++){
+                          bool result = await _checkLocationAndShowDialog(attendance!, branches[i]);
+                          if(result){
+                            isCorrectBranch = true;
+                            break;
+                          }
+                        }
+                        if(!isCorrectBranch){
+                          showErrorDialog(context);
+                        }
+                      } else {
+                        errorToast(localization.cannot_check_in);
+                      }
+                    }
+
                   },
                   child: Container(
                     width: double.infinity,
