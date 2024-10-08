@@ -99,3 +99,6 @@ For Android, ensure that the app has internet permissions in the AndroidManifest
 - Scan QR code to login:
 
 ![Alt text](https://github.com/nguyenvananh0311/ACES_MobileApp/blob/main/LoginQRCode.jpg)
+- Scan QR code to attendance:
+
+![Alt text](https://github.com/nguyenvananh0311/ACES_MobileApp/blob/main/AttendanceQRCode.png)
