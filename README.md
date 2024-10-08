@@ -89,6 +89,9 @@ If you already have Firebase CLI set up, you can skip this step.
        pod install
        ```
    - Integrating the Cloud Messaging plugin on iOS & macOS following the document: https://firebase.flutter.dev/docs/messaging/apple-integration/
+7. Ask for signing keys
+   - android/key.properties
+   - android/app/aies-key
 
 ## Troubleshooting
 Ensure the google-services.json (Android) or GoogleService-Info.plist (iOS) file is correctly placed in the project directory.
