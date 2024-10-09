@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
     'calendarSubtitle': MessageLookupByLibrary.simpleMessage('Ngày làm việc & Ngày nghỉ'),
     'calendarTitle': MessageLookupByLibrary.simpleMessage('Lịch của tôi'),
     'cancel': MessageLookupByLibrary.simpleMessage('HỦY'),
+    'cancel_lowercase': MessageLookupByLibrary.simpleMessage('Hủy'),
     'canceledSuccessfully': MessageLookupByLibrary.simpleMessage('Hủy thành công'),
     'cannot_check_in': MessageLookupByLibrary.simpleMessage('Không thể điểm danh'),
     'check': MessageLookupByLibrary.simpleMessage('Điểm danh'),
