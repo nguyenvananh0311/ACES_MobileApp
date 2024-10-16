@@ -36,9 +36,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This app requires access to the camera to scan QR codes.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to send location-based notifications.</string>
+	<string>We need your location to make sure you are in the correct location for attendance check in and check out.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location to send location-based notifications.</string>
+	<string>We need your location to make sure you are in the correct location for attendance check in and check out.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires access to the photo library to upload images.</string>
 	<key>NSUserNotificationUsageDescription</key>
