@@ -49,3 +49,5 @@ ios/Podfile.lock
 pubspec.lock
 .vscode
 android/app/aies-key
+
+deploy.sh
