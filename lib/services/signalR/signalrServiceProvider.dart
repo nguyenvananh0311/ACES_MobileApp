@@ -2,8 +2,6 @@ import 'package:ems/services/signalR/signalrService.dart';
 import 'package:flutter/foundation.dart';
 
 import '../apiService.dart';
-import '../notification/localNotificationService.dart';
-
 
 class SignalRServiceProvider extends ChangeNotifier {
   final SignalRService _signalRService = SignalRService();
@@ -13,15 +11,17 @@ class SignalRServiceProvider extends ChangeNotifier {
   String get message => _message;
   int get total => _total;
   Future<void> reload(int employeeId, String companyId) async {
-    final totalResponse = await ApiService().fetchTotalNotification(employeeId, companyId); // Sử dụng ID và companyId thực tế
-    _total = totalResponse.response!;
+    final totalResponse = await ApiService().fetchTotalNotification(
+        employeeId, companyId); // Sử dụng ID và companyId thực tế
+    _total = totalResponse.response ?? 0;
     notifyListeners();
   }
 
   Future<void> initialize(int employeeId, String companyId) async {
     await _signalRService.initialize(employeeId.toString());
-    final totalResponse = await ApiService().fetchTotalNotification(employeeId, companyId); // Sử dụng ID và companyId thực tế
-    _total = totalResponse.response!;
+    final totalResponse = await ApiService().fetchTotalNotification(
+        employeeId, companyId); // Sử dụng ID và companyId thực tế
+    _total = totalResponse.response ?? 0;
     notifyListeners();
 
     // _signalRService.onReceiveReplacementMessage((message) {

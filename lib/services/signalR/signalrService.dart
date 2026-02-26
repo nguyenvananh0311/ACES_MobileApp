@@ -4,13 +4,15 @@ import 'dart:async';
 
 class SignalRService {
   late HubConnection _hubConnection;
-  final String _serverUrl = "${dotenv.env['API_URL'] ??  'http://116.212.136.14:5678'}/notificationHub?employeeId=";
+  final String _serverUrl =
+      "${dotenv.env['API_URL'] ?? 'https://203.176.128.5:5678'}/notificationHub?employeeId=";
   bool _isConnected = false;
   Timer? _reconnectTimer;
   final int _retryDelay = 20; // Retry every 5 seconds
 
   Future<void> initialize(String employeeId) async {
-    _hubConnection = HubConnectionBuilder().withUrl(_serverUrl + employeeId).build();
+    _hubConnection =
+        HubConnectionBuilder().withUrl(_serverUrl + employeeId).build();
     await _startConnection();
   }
 
@@ -28,7 +30,8 @@ class SignalRService {
 
   void _startReconnectTimer() {
     if (_reconnectTimer == null || !_reconnectTimer!.isActive) {
-      _reconnectTimer = Timer.periodic(Duration(seconds: _retryDelay), (timer) async {
+      _reconnectTimer =
+          Timer.periodic(Duration(seconds: _retryDelay), (timer) async {
         if (!_isConnected) {
           print('Attempting to reconnect...');
           await _startConnection();
@@ -39,7 +42,8 @@ class SignalRService {
     }
   }
 
-  void onReceiveTotalNotification(void Function(List<dynamic>? message) callback) {
+  void onReceiveTotalNotification(
+      void Function(List<dynamic>? message) callback) {
     _hubConnection.on('TotalNotification', callback);
   }
 

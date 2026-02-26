@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
@@ -17,13 +16,15 @@ import '../models/employee/employee.dart';
 import '../services/apiService.dart';
 import 'feedback.dart';
 
-
-
 class ProfileScreen extends StatefulWidget {
   final String companyId;
   final int employeeId;
   final Function(Locale) onLocaleChange;
-  const ProfileScreen({super.key, required this.companyId, required this.employeeId,required this.onLocaleChange});
+  const ProfileScreen(
+      {super.key,
+      required this.companyId,
+      required this.employeeId,
+      required this.onLocaleChange});
 
   @override
   _ProfileState createState() => _ProfileState();
@@ -37,7 +38,6 @@ class _ProfileState extends State<ProfileScreen> {
   int random = Random().nextInt(1000);
 
   Future<List<dynamic>> fetchData() async {
-
     return await Future.wait([
       ApiService().fetchEmployeeInfo(widget.employeeId, widget.companyId),
     ]);
@@ -48,13 +48,16 @@ class _ProfileState extends State<ProfileScreen> {
     super.initState();
     futureData = fetchData();
   }
+
   Future<void> _showLogoutConfirmationDialog(BuildContext context) async {
     return showDialog<void>(
       context: context,
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(AppLocalizations.of(context)!.confirm_logout,),
+          title: Text(
+            AppLocalizations.of(context)!.confirm_logout,
+          ),
           content: Text(AppLocalizations.of(context)!.logout_confirmation),
           actions: <Widget>[
             TextButton(
@@ -66,19 +69,25 @@ class _ProfileState extends State<ProfileScreen> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => InitialScreen(onLocaleChange: widget.onLocaleChange),
+                    builder: (context) =>
+                        InitialScreen(onLocaleChange: widget.onLocaleChange),
                   ),
                 );
               },
-              child: Text(AppLocalizations.of(context)!.yes, style: const TextStyle(fontSize: 20),),
+              child: Text(
+                AppLocalizations.of(context)!.yes,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text(AppLocalizations.of(context)!.no,  style: const TextStyle(fontSize: 20),),
+              child: Text(
+                AppLocalizations.of(context)!.no,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
-
           ],
         );
       },
@@ -94,27 +103,34 @@ class _ProfileState extends State<ProfileScreen> {
         title: localization!.profile,
         actions: Row(
           children: [
-            LanguageSelector (onLocaleChange: widget.onLocaleChange),
+            LanguageSelector(onLocaleChange: widget.onLocaleChange),
             PopupMenuButton<String>(
-              icon: const Icon(Icons.settings, size: 30, color: Colors.white,),
+              icon: const Icon(
+                Icons.settings,
+                size: 30,
+                color: Colors.white,
+              ),
               onSelected: (choice) async {
                 switch (choice) {
                   case 'logout':
                     _showLogoutConfirmationDialog(context);
                     break;
                   case 'feedback':
-                  // Handle settings logic here
+                    // Handle settings logic here
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FeedbackScreen(employeeId: widget.employeeId, companyId: widget.companyId,),
+                        builder: (context) => FeedbackScreen(
+                          employeeId: widget.employeeId,
+                          companyId: widget.companyId,
+                        ),
                       ),
                     );
                     break;
                 }
               },
               itemBuilder: (BuildContext context) {
-                return {'feedback','logout'}.map((String choice) {
+                return {'feedback', 'logout'}.map((String choice) {
                   return PopupMenuItem<String>(
                     value: choice,
                     child: Text(localization.translate(choice)),
@@ -122,9 +138,9 @@ class _ProfileState extends State<ProfileScreen> {
                 }).toList();
               },
             ),
-
           ],
-        ),),
+        ),
+      ),
       body: FutureBuilder<List<dynamic>>(
         future: futureData,
         builder: (context, snapshot) {
@@ -139,19 +155,22 @@ class _ProfileState extends State<ProfileScreen> {
               ],
             );
           } else if (snapshot.hasError) {
-            return Center(child: Text(localization.error(snapshot.error.toString())));
+            return Center(
+                child: Text(localization.error(snapshot.error.toString())));
           } else if (snapshot.hasData) {
             final code = snapshot.data![0].statusCode;
-            if(code == 500){
-              if(snapshot.data![0].message == "Value cannot be null. (Parameter 'Cannot find the employee')") return const Center(child: Text("Your account has been deleted"));
+            if (code == 500) {
+              if (snapshot.data![0].message ==
+                  "Value cannot be null. (Parameter 'Cannot find the employee')")
+                return const Center(
+                    child: Text("Your account has been deleted"));
               return const Center(child: Text('No data available'));
-            }
-            else{
+            } else {
               final profile = snapshot.data![0].response;
               return Column(
                 children: [
                   Card(
-                    margin: const EdgeInsets.fromLTRB(16,0,16,16),
+                    margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
@@ -161,13 +180,15 @@ class _ProfileState extends State<ProfileScreen> {
                               IconButton(
                                 icon: Stack(
                                   children: <Widget>[
-                                    ImageUrl('${dotenv.env['API_URL'] ??  'http://116.212.136.14:5678'}/Images/Employees/${widget.employeeId}.png?random=$random', 70),
+                                    ImageUrl(
+                                        '${dotenv.env['API_URL'] ?? 'https://203.176.128.5:5678'}/Images/Employees/${widget.employeeId}.png?random=$random',
+                                        70),
                                     Positioned(
                                       right: 0,
                                       bottom: 0,
                                       child: Container(
                                         padding: const EdgeInsets.all(0),
-                                        decoration:  BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Colors.grey[50],
                                           shape: BoxShape.circle,
                                         ),
@@ -175,18 +196,24 @@ class _ProfileState extends State<ProfileScreen> {
                                           minWidth: 1,
                                           minHeight: 1,
                                         ),
-                                        child: const Icon(Icons.camera_alt, color: Colors.grey, size: 20),
+                                        child: const Icon(Icons.camera_alt,
+                                            color: Colors.grey, size: 20),
                                       ),
                                     )
                                   ],
                                 ),
                                 onPressed: () async {
                                   var fileBase64 = await _pickFile(context);
-                                  if(fileBase64 != ""){
+                                  if (fileBase64 != "") {
                                     setState(() {
                                       isLoading = true;
                                     });
-                                    var response = await ApiService().uploadImage(Employee(id: widget.employeeId, image: fileBase64), widget.companyId);
+                                    var response = await ApiService()
+                                        .uploadImage(
+                                            Employee(
+                                                id: widget.employeeId,
+                                                image: fileBase64),
+                                            widget.companyId);
                                     setState(() {
                                       isLoading = false;
                                     });
@@ -244,7 +271,7 @@ class _ProfileState extends State<ProfileScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(localization.joinAt),
-                              Text(profile.joinTime.substring(0,10)),
+                              Text(profile.joinTime.substring(0, 10)),
                             ],
                           ),
                           const SizedBox(height: 5),
@@ -268,7 +295,6 @@ class _ProfileState extends State<ProfileScreen> {
                 ],
               );
             }
-
           } else {
             return const Center(child: Text('No data available'));
           }
@@ -276,18 +302,21 @@ class _ProfileState extends State<ProfileScreen> {
       ),
     );
   }
+
   String formatDuration(int totalDays) {
     int years = totalDays ~/ 365;
     int remainingDays = totalDays % 365;
     int months = remainingDays ~/ 30;
     int days = remainingDays % 30;
     var localization = AppLocalizations.of(context);
-    String? yearString = years <= 1 ? localization?.year: localization?.years;
-    String? monthString = months <= 1 ? localization?.month : localization?.months;
+    String? yearString = years <= 1 ? localization?.year : localization?.years;
+    String? monthString =
+        months <= 1 ? localization?.month : localization?.months;
     String? dayString = days <= 1 ? localization?.day : localization?.days;
 
     return '$years $yearString $months $monthString $days $dayString';
   }
+
   Future<String> _pickFile(BuildContext context) async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.image,
@@ -296,16 +325,17 @@ class _ProfileState extends State<ProfileScreen> {
       final File file = File(result.files.single.path!);
       String base64Image = _convertToBase64(file);
       return base64Image;
-
     }
     return "";
   }
-  String _convertToBase64(File file)  {
+
+  String _convertToBase64(File file) {
     File imageFile = File(file.path);
     List<int> imageBytes = imageFile.readAsBytesSync();
     return base64Encode(imageBytes);
   }
 }
+
 extension LocalizedStrings on AppLocalizations {
   String translate(String key) {
     switch (key) {

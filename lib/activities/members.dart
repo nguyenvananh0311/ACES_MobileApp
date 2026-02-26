@@ -9,7 +9,8 @@ import '../services/apiService.dart';
 class MemberScreen extends StatefulWidget {
   final String companyId;
   final int employeeId;
-  const MemberScreen({super.key, required this.companyId, required this.employeeId});
+  const MemberScreen(
+      {super.key, required this.companyId, required this.employeeId});
 
   @override
   _MemberState createState() => _MemberState();
@@ -28,16 +29,16 @@ class _MemberState extends State<MemberScreen> {
       throw 'Could not launch $phoneNumber';
     }
   }
+
   @override
   void initState() {
     super.initState();
     futureData = fetchData();
   }
 
-
   Future<List<dynamic>> fetchData() async {
     return await Future.wait([
-      ApiService().fetchMembers(widget.employeeId,widget.companyId),
+      ApiService().fetchMembers(widget.employeeId, widget.companyId),
     ]);
   }
 
@@ -50,7 +51,10 @@ class _MemberState extends State<MemberScreen> {
   Widget build(BuildContext context) {
     var localization = AppLocalizations.of(context);
     return Scaffold(
-      appBar: CustomAppBarScreen(title: localization!.member, isBack: true,),
+      appBar: CustomAppBarScreen(
+        title: localization!.member,
+        isBack: true,
+      ),
       body: Column(
         children: [
           Expanded(
@@ -68,7 +72,9 @@ class _MemberState extends State<MemberScreen> {
                     ],
                   );
                 } else if (snapshot.hasError) {
-                  return Center(child: Text(localization.error(snapshot.error.toString())));
+                  return Center(
+                      child:
+                          Text(localization.error(snapshot.error.toString())));
                 } else if (snapshot.hasData) {
                   final members = snapshot.data![0].response;
 
@@ -79,37 +85,47 @@ class _MemberState extends State<MemberScreen> {
                           itemCount: members?.length ?? 0,
                           itemBuilder: (context, index) {
                             return Card(
-                              margin: const EdgeInsets.fromLTRB(20,10,20,10),
+                              margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                               elevation: 5.0,
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)
-                              ),
+                                  borderRadius: BorderRadius.circular(10.0)),
                               shadowColor: Colors.black,
                               child: ListTile(
-                                  leading: ImageUrl('${dotenv.env['API_URL'] ??  'http://116.212.136.14:5678'}/Images/Employees/${members![index].id}.png', null),
-                                  title: Text(members![index].name, style: const TextStyle(fontWeight: FontWeight.bold),),
-                                  subtitle: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(members![index].position),
-                                      Text(members![index].department),
-                                      Text(members![index].branch),
-                                      Text(members![index].phoneNumber ?? ''),
-                                    ],
-                                  ),
-                                trailing: members![index].phoneNumber != null && members![index].phoneNumber != ''
-                                    ?  Container(
-                                  decoration: const BoxDecoration(
-                                      color: Colors.green,
-                                      shape: BoxShape.circle
-                                  ),
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: const Icon(Icons.phone, size: 25, color: Colors.white),)
-                                    : const SizedBox(width: 0,),
-                                onTap: (){
-                                    if(members![index].phoneNumber != null && members![index].phoneNumber != "") {
-                                      _makePhoneCall(members![index].phoneNumber);
-                                    }
+                                leading: ImageUrl(
+                                    '${dotenv.env['API_URL'] ?? 'https://203.176.128.5:5678'}/Images/Employees/${members![index].id}.png',
+                                    null),
+                                title: Text(
+                                  members![index].name,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                subtitle: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(members![index].position),
+                                    Text(members![index].department),
+                                    Text(members![index].branch),
+                                    Text(members![index].phoneNumber ?? ''),
+                                  ],
+                                ),
+                                trailing: members![index].phoneNumber != null &&
+                                        members![index].phoneNumber != ''
+                                    ? Container(
+                                        decoration: const BoxDecoration(
+                                            color: Colors.green,
+                                            shape: BoxShape.circle),
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: const Icon(Icons.phone,
+                                            size: 25, color: Colors.white),
+                                      )
+                                    : const SizedBox(
+                                        width: 0,
+                                      ),
+                                onTap: () {
+                                  if (members![index].phoneNumber != null &&
+                                      members![index].phoneNumber != "") {
+                                    _makePhoneCall(members![index].phoneNumber);
+                                  }
                                 },
                               ),
                             );
@@ -134,10 +150,8 @@ class _MemberState extends State<MemberScreen> {
               },
             ),
           ),
-
         ],
       ),
-
     );
   }
 }

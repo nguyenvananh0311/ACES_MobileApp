@@ -1,4 +1,5 @@
-import 'package:ems/services/apiService.dart';
+import 'dart:io';
+
 import 'package:ems/services/notification/localNotificationService.dart';
 import 'package:ems/services/permission/requestPermission.dart';
 import 'package:ems/services/signalR/signalrServiceProvider.dart';
@@ -10,14 +11,25 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'activities/scanLoginQRcode.dart';
 import 'assets/widget_component/languege.dart';
 import 'firebase_options.dart';
 import 'l10n/app_localizations.dart';
 import 'mainscreen.dart';
-import 'models/notification/subscription.dart';
+
+/// An override class for overriding bad SSL certificate
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
 
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   await RequestPermission().requestNotificationPermission();
   await LocalNotificationService().init();
@@ -50,16 +62,16 @@ void main() async {
     ),
   );
 }
+
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   // await Firebase.initializeApp();
-  if(message.notification?.title != null) {
-    LocalNotificationService().showNotificationAndroid('${message.notification?.title}', '${message.notification?.body}');
+  if (message.notification?.title != null) {
+    LocalNotificationService().showNotificationAndroid(
+        '${message.notification?.title}', '${message.notification?.body}');
     // LocalNotificationService().showNotificationIos('${message.notification?.title}', '${message.notification?.body}');
-
-
   }
-
 }
+
 class MyApp extends StatefulWidget {
   final String? companyId;
   final int? employeeId;
@@ -67,12 +79,17 @@ class MyApp extends StatefulWidget {
   final String? employeeName;
   final FirebaseAnalytics? analytics;
 
-  const MyApp({super.key, this.companyId, this.employeeId, this.localeCode, this.analytics, this.employeeName});
+  const MyApp(
+      {super.key,
+      this.companyId,
+      this.employeeId,
+      this.localeCode,
+      this.analytics,
+      this.employeeName});
 
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 
 class _MyAppState extends State<MyApp> {
   late Locale _locale;
@@ -83,7 +100,8 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     _locale = Locale(widget.localeCode ?? 'en');
     if (widget.employeeId != null && widget.companyId != null) {
-      final signalRServiceProvider = Provider.of<SignalRServiceProvider>(context, listen: false);
+      final signalRServiceProvider =
+          Provider.of<SignalRServiceProvider>(context, listen: false);
       signalRServiceProvider.initialize(widget.employeeId!, widget.companyId!);
     }
     // if (widget.employeeId != null && widget.companyId != null) {
@@ -128,22 +146,25 @@ class _MyAppState extends State<MyApp> {
         Locale('km', ''),
       ],
       navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: widget.analytics!), // Thêm observer cho Firebase Analytics
+        FirebaseAnalyticsObserver(
+            analytics:
+                widget.analytics!), // Thêm observer cho Firebase Analytics
       ],
-      home: widget.companyId != null && widget.employeeId != null && widget.employeeId != 0
+      home: widget.companyId != null &&
+              widget.employeeId != null &&
+              widget.employeeId != 0
           ? MainScreen(
-        companyId: widget.companyId!,
-        employeeId: widget.employeeId!,
-        employeeName: widget.employeeName,
-        onLocaleChange: _setLocale,
-      )
+              companyId: widget.companyId!,
+              employeeId: widget.employeeId!,
+              employeeName: widget.employeeName,
+              onLocaleChange: _setLocale,
+            )
           : InitialScreen(
-        onLocaleChange: _setLocale,
-      ),
+              onLocaleChange: _setLocale,
+            ),
     );
   }
 }
-
 
 class InitialScreen extends StatelessWidget {
   final Function(Locale) onLocaleChange;
@@ -154,44 +175,53 @@ class InitialScreen extends StatelessWidget {
     var localization = AppLocalizations.of(context);
     return WillPopScope(
         onWillPop: () async => false, // Ngăn chặn việc quay lại
-        child:  Scaffold(
-        appBar: AppBar(
-          actions: [
-            LanguageSelector (onLocaleChange: onLocaleChange),
-          ],
-          automaticallyImplyLeading: false,
-        ),
-        body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'lib/assets/images/mekongnet.png',
-            width: 200,
-            height: 200,
+        child: Scaffold(
+          appBar: AppBar(
+            actions: [
+              LanguageSelector(onLocaleChange: onLocaleChange),
+            ],
+            automaticallyImplyLeading: false,
           ),
-          const SizedBox(height: 50,),
-          Card(
-            margin: const EdgeInsets.all(20.0),
-            elevation: 5.0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            color: Colors.blue,
-            child: ListTile(
-              title: Text(localization!.scanQRCodeToLogin, style: const TextStyle(color: Colors.white),),
-              trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white,),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>  ScanLoginQRScreen(onLocaleChange:  onLocaleChange ),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'lib/assets/images/mekongnet.png',
+                width: 200,
+                height: 200,
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Card(
+                margin: const EdgeInsets.all(20.0),
+                elevation: 5.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                color: Colors.blue,
+                child: ListTile(
+                  title: Text(
+                    localization!.scanQRCodeToLogin,
+                    style: const TextStyle(color: Colors.white),
                   ),
-                );
-              },
-            ),
+                  trailing: const Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            ScanLoginQRScreen(onLocaleChange: onLocaleChange),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 }

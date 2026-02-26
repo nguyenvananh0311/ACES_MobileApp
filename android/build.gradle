@@ -19,6 +19,15 @@ allprojects {
         google()
         mavenCentral()
     }
+    subprojects {
+        afterEvaluate { project ->
+            if (project.name == "qr_code_scanner") {
+                project.android {
+                    namespace "com.example.qr_code_scanner"
+                }
+            }
+        }
+    }
 }
 
 rootProject.buildDir = '../build'
